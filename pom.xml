@@ -18,6 +18,7 @@
       <!--Added scope-->
       <scope>test</scope>
     </dependency>
+	<Adding depenency>
     <dependency>
       <groupId>org.springframework</groupId>
       <artifactId>spring-core</artifactId>
