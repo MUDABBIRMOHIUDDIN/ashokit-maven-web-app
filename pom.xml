@@ -1,26 +1,31 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-4.0.0.xsd"> <!-- Error: wrong schema location -->
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"><!--corrected  the scheme--> 
   <modelVersion>4.0.0</modelVersion>
   <groupId>in.ashokit</groupId>
-  <artifactId></artifactId> <!-- Error: artifactId is empty -->
+  <artifactId>ashokit-web-app</artifactId>
   <packaging>war</packaging>
   <version>3.0-RELEASE</version>
   <name>01-maven-web-app</name>
-  <url>htp://maven.apache.org</url> <!-- Error: wrong URL format -->
- 
+  <!-- Corrected url-->
+  <url>http://maven.apache.org</url>
+
   <dependencies>
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
       <version>3.8.1</version>
+      <!--Added scope-->
+      <scope>test</scope>
     </dependency>
     <dependency>
       <groupId>org.springframework</groupId>
       <artifactId>spring-core</artifactId>
-      <!-- Error: missing version -->
+      <!--added version-->
+      <version>5.2.22.RELEASE</version>
     </dependency>
   </dependencies>
-  
+
   <build>
     <finalName>maven-web-app</finalName>
     <plugins>
@@ -29,8 +34,9 @@
         <artifactId>maven-compiler-plugin</artifactId>
         <version>3.8.1</version>
         <configuration>
+         <!-- resolved version conflicts-->
           <source>1.8</source>
-          <target>1.7</target> <!-- Error: source and target mismatch -->
+          <target>1.8</target>
         </configuration>
       </plugin>
     </plugins>
